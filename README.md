@@ -19,11 +19,24 @@ A scalable and secure REST API for a Customer Relationship Management (CRM) syst
 
 ## Setup & Installation
 
-1. **Clone the repository:**
+1. **Clone the repository**
    ```bash
    git clone https://github.com/adityayadavms/BrahmaverseAi_Assessment.git
    cd BrahmaverseAi_Assessment
+   ```
 
-2. **Start the server **
-   ````powershell
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Configure environment variables**
+   ```bash
+   cp .env.example .env
+   ```
+   Then set `MONGO_URI`, `JWT_SECRET`, and `PORT`.
+
+4. **Start the server**
+   ```bash
    npm run dev
+   ```
