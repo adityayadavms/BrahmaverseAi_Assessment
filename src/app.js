@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-// FIX: Point to routes folder, and middlewares (with an 's')
+
 const authRoutes = require('./routes/auth.routes');
 const errorHandler = require('./middlewares/errorHandler');
 const adminRoutes = require('./routes/admin.routes'); 

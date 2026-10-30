@@ -1,13 +1,13 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-// FIX: Path to models
+
 const User = require('../models/user.model');
-// FIX: Path to utils
+
 const AppError = require('../utils/AppError');
 
 const SALT_ROUNDS = 10;
 
-// -------- Internal helpers --------
+
 const hashPassword = (plain) => bcrypt.hash(plain, SALT_ROUNDS);
 
 const signToken = (user) =>
@@ -77,8 +77,7 @@ exports.getMe = async (userId) => {
   return user;
 };
 
-// Reserved for future implementation; signature is stable so routes/controllers
-// won't need to change when we fill it in.
+
 exports.resetPassword = async (/* { email, newPassword } */) => {
   throw new AppError('resetPassword not implemented yet', 501);
 };

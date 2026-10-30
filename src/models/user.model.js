@@ -24,11 +24,11 @@ const userSchema = new mongoose.Schema(
       enum: ['admin', 'counselor'],
       default: 'counselor',
     },
-    // Add this inside the userSchema
+
     status: {
       type: String,
       enum: ['pending', 'active', 'rejected'],
-      default: 'pending', // New users start here
+      default: 'pending', 
     },
   },
   { timestamps: true }
