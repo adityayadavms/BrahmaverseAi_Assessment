@@ -23,3 +23,7 @@ A scalable and secure REST API for a Customer Relationship Management (CRM) syst
    ```bash
    git clone https://github.com/adityayadavms/BrahmaverseAi_Assessment.git
    cd BrahmaverseAi_Assessment
+
+2. **Start the server **
+   ````powershell
+   npm run dev
