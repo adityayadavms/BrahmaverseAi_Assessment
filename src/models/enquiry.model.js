@@ -6,7 +6,6 @@ const enquirySchema = new mongoose.Schema(
     phone: { type: String, required: true, trim: true },
     courseInterest: { type: String, required: true, trim: true },
     
-    // If null, it's public. If populated with a User ID, it becomes private.
     claimedBy: { 
       type: mongoose.Schema.Types.ObjectId, 
       ref: 'User', 
@@ -21,10 +20,10 @@ const enquirySchema = new mongoose.Schema(
       default: null 
     },
   },
-  { timestamps: true } // This automatically creates 'createdAt' (askedAt) and 'updatedAt'
+  { timestamps: true } 
 );
 
-// Index to speed up queries for unclaimed leads and user-specific leads
+
 enquirySchema.index({ claimedBy: 1, createdAt: -1 });
 
 module.exports = mongoose.model('Enquiry', enquirySchema);

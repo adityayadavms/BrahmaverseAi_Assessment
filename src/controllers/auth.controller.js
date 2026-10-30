@@ -1,6 +1,6 @@
-// FIX: Path to services
+
 const authService = require('../services/auth.service');
-// FIX: Path to utils
+
 const asyncHandler = require('../utils/asyncHandler');
 
 exports.register = asyncHandler(async (req, res) => {

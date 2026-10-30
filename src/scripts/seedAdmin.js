@@ -1,5 +1,5 @@
 const path = require('path');
-// Load .env from the root of the project (2 levels up from src/scripts)
+
 require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
 
 const mongoose = require('mongoose');
@@ -28,9 +28,7 @@ const seedAdmin = async () => {
       status: 'active',
     });
 
-    console.log('Admin created successfully.');
-    console.log('Email: admin@brahma.ai');
-    console.log('Password: admin123');
+    
     process.exit(0);
   } catch (err) {
     console.error('Error seeding admin:', err);
