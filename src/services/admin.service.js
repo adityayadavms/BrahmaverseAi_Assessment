@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const User = require('../models/user.model');
-const asyncHandler = require('../utils/asyncHandler');
+
 const AppError = require('../utils/AppError');
 
 exports.getPendingUsers = async () => {
