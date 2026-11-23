@@ -5,7 +5,7 @@ const asyncHandler = require('../utils/asyncHandler');
 
 exports.register = asyncHandler(async (req, res) => {
   const { token, user } = await authService.signup(req.body);
-  res.status(201).json({ success: true, data: { token, user } });
+  res.status(201).json({ success: true, data: {  user } });
 });
 
 exports.login = asyncHandler(async (req, res) => {
