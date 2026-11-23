@@ -4,7 +4,7 @@ const authService = require('../services/auth.service');
 const asyncHandler = require('../utils/asyncHandler');
 
 exports.register = asyncHandler(async (req, res) => {
-  const { token, user } = await authService.signup(req.body);
+  const { user } = await authService.signup(req.body);
   res.status(201).json({ success: true, data: {  user } });
 });
 
